@@ -7,7 +7,7 @@ import { login, signup } from '../../firebased'
 
    const [signState, setSignState] = useState("Sign In")
    const [name, setName] = useState("");
-   const [email, setEmai] = useState("");
+   const [email, setEmail] = useState("");
    const [password, setPassword] = useState("")
 
    const user_auth = async (event) =>{
@@ -28,7 +28,7 @@ import { login, signup } from '../../firebased'
           {signState==="Sign Up" ? 
           <input value={name} onChange={(e)=>{setName(e.target.value)}} type='text' placeholder='Your Name'/> : <></>}
           
-          <input value={email} onChange={(e)=>{setEmai(e.target.value)}} type='email' placeholder='Your Email'/>
+          <input value={email} onChange={(e)=>{setEmail(e.target.value)}} type='email' placeholder='Your Email'/>
           <input value={password} onChange={(e)=>{setPassword(e.target.value)}} type='password' placeholder='Your Password'/>
           <button onClick={user_auth} type='submit'>{signState}</button>
           <div className='form-help'>
